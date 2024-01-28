@@ -25,5 +25,4 @@ public class MathCalculator {
         System.out.println("Результат расчета равен: " + differenceAndDivision(100, 20));
         System.out.println("Результат расчета равен: " + all(200, 10));
     }
-
 }
