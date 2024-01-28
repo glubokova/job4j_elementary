@@ -8,6 +8,7 @@ public class MathCalculator {
         return sum(first, second)
                 + multiply(first, second);
     }
+
     public static double differenceAndDivision(double first, double second) {
         return difference(first, second)
                 + division(first, second);
