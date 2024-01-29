@@ -22,4 +22,5 @@ public class Converter {
         passed = output == expected;
         System.out.println("120 rubles are 2. Test result: " + passed);
     }
+
 }
