@@ -42,14 +42,14 @@ class LogicNotTest {
 
     @Test
     void whenNotEvenFalse() {
-        int num = 2;
+        int num = 3;
         boolean result = LogicNot.notEven(num);
         assertThat(result).isFalse();
     }
 
     @Test
     void whenNotEvenTrue() {
-        int num = 3;
+        int num = 0;
         boolean result = LogicNot.notEven(num);
         assertThat(result).isTrue();
     }
