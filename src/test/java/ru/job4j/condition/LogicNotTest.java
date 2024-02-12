@@ -7,14 +7,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 class LogicNotTest {
     @Test
     void whenIsEvenTrue() {
-        int num = 3;
+        int num = 2;
         boolean result = LogicNot.isEven(num);
         assertThat(result).isTrue();
     }
 
     @Test
     void whenIsEvenFalse() {
-        int num = 2;
+        int num = 3;
         boolean result = LogicNot.isEven(num);
         assertThat(result).isFalse();
     }
@@ -42,14 +42,14 @@ class LogicNotTest {
 
     @Test
     void whenNotEvenFalse() {
-        int num = 3;
+        int num = 2;
         boolean result = LogicNot.notEven(num);
         assertThat(result).isFalse();
     }
 
     @Test
     void whenNotEvenTrue() {
-        int num = 0;
+        int num = 3;
         boolean result = LogicNot.notEven(num);
         assertThat(result).isTrue();
     }
@@ -70,21 +70,21 @@ class LogicNotTest {
 
     @Test
     void whenNumIs0NotPositiveFalse() {
-        int num = 2;
+        int num = 0;
         boolean result = LogicNot.notPositive(num);
         assertThat(result).isFalse();
     }
 
     @Test
     void whenNotEvenAndPositiveIsTrue() {
-        int num = 4;
+        int num = 3;
         boolean result = LogicNot.notEvenAndPositive(num);
         assertThat(result).isTrue();
     }
 
     @Test
     void whenNotEvenFalseIsAllFalse() {
-        int num = 5;
+        int num = 2;
         boolean result = LogicNot.notEvenAndPositive(num);
         assertThat(result).isFalse();
     }
@@ -112,7 +112,7 @@ class LogicNotTest {
 
     @Test
     void whenEvenIsTrueThenAllIsTrue() {
-        int num = 1;
+        int num = 2;
         boolean result = LogicNot.evenOrNotPositive(num);
         assertThat(result).isTrue();
     }
@@ -126,7 +126,7 @@ class LogicNotTest {
 
     @Test
     void whenEvenOrNotPositiveIsFalse() {
-        int num = 2;
+        int num = 3;
         boolean result = LogicNot.evenOrNotPositive(num);
         assertThat(result).isFalse();
     }
