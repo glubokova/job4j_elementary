@@ -16,9 +16,9 @@ public class CheckPrimeNumber {
     public static void main(String[] args) {
         int num = 17;
         if (check(num)) {
-            System.out.println(num + " является простым числом");
+            System.out.println(num + " is a prime number. ");
         } else {
-            System.out.println(num + " не является простым числом");
+            System.out.println(num + " is not a prime number. ");
         }
     }
 }
