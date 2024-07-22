@@ -1,29 +1,77 @@
 package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.withPrecision;
 
 class PointTest {
 
-    private void assertDistance(int x1, int y1, int x2, int y2, double expected) {
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
-    }
-
     @Test
     void when00to20then2() {
-        assertDistance(0, 0, 2, 0, 2);
+        class Point {
+            private int x;
+            private int y;
+
+            public Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            public double distance(Point that) {
+                return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
+            }
+        }
+
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 0);
+        double expected = 2.0;
+        double out = a.distance(b);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when10To13Then3() {
-        assertDistance(1, 0, 1, 3, 3);
+        class Point {
+            private int x;
+            private int y;
+
+            public Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            public double distance(Point that) {
+                return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
+            }
+        }
+
+        Point a = new Point(1, 0);
+        Point b = new Point(1, 3);
+        double expected = 3.0;
+        double out = a.distance(b);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when00to02then2() {
-        assertDistance(0, 0, 0, 2, 2);
+        class Point {
+            private int x;
+            private int y;
+
+            public Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            public double distance(Point that) {
+                return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
+            }
+        }
+
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double expected = 2.0;
+        double out = a.distance(b);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 }
