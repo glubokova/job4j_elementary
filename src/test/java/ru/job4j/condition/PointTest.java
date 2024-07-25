@@ -71,7 +71,7 @@ class PointTest {
         Point a = new Point(0, 0);
         Point b = new Point(0, 2);
         double expected = 2.0;
-        double out = a.distance(b);
+        double out = a.distance(b );
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 }
