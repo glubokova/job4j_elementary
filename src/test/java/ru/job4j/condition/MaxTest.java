@@ -27,7 +27,7 @@ class MaxTest {
 
     @Test
     void whenMaxSecondNumber() {
-        int left = 20;
+        int left = 30;
         int right = 60;
         int result = Max.max(left, right);
         int expected = 60;
