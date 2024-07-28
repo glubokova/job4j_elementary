@@ -22,12 +22,6 @@ public class Point {
                 + Math.pow(this.z, 2));
     }
 
-    public static double distance3d(int x1, int y1, int z1, int x2, int y2, int z2, int x3, int y3, int z3) {
-        return Math.sqrt(Math.pow((x2 - x1), 2)
-                + Math.pow((y2 - y1), 2)
-                + Math.pow((z2 - z1), 2));
-    }
-
     public double distance(Point that) {
         return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
     }
@@ -41,5 +35,9 @@ public class Point {
         Point b = new Point(0, 2);
         double distance = a.distance(b);
         System.out.println(distance);
+        Point c = new Point(1, 0, 2);
+        Point d = new Point(2, 1, 0);
+        double distance3d = c.distance3d(d);
+        System.out.println(distance3d);
     }
 }
