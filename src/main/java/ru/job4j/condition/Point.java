@@ -3,10 +3,29 @@ package ru.job4j.condition;
 public class Point {
     private int x;
     private int y;
+    private int z;
+
+    public Point(int first, int second, int third) {
+        this.x = first;
+        this.y = second;
+        this.z = third;
+    }
 
     public Point(int first, int second) {
         this.x = first;
         this.y = second;
+    }
+
+    public double distance3d(Point that) {
+        return Math.sqrt(Math.pow(this.x - that.x, 2) +
+                Math.pow(this.y - that.y, 2) +
+                Math.pow(this.z, 2));
+    }
+
+    public static double distance3d(int x1, int y1, int z1, int x2, int y2, int z2, int x3, int y3, int z3) {
+        return Math.sqrt(Math.pow((x2 - x1), 2) +
+                Math.pow((y2 - y1), 2) +
+                Math.pow((z2 - z1), 2));
     }
 
     public double distance(Point that) {
