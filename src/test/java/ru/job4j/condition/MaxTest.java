@@ -49,8 +49,8 @@ class MaxTest {
         int second = 2;
         int third = 3;
         int result = Max.max(first, second, third);
-        int expected = 6;
-        assertThat(result).isEqualTo(6);
+        int expected = 3;
+        assertThat(result).isEqualTo(3);
     }
 
     @Test
@@ -60,7 +60,7 @@ class MaxTest {
         int third = 3;
         int fourth = 4;
         int result = Max.max(first, second, third, fourth);
-        int expected = 9;
-        assertThat(result).isEqualTo(9);
+        int expected = 4;
+        assertThat(result).isEqualTo(4);
     }
 }
